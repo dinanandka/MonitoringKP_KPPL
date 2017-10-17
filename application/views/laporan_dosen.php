@@ -79,6 +79,7 @@
             <table class="table table-hover">
               <thead>
                 <tr>
+				<th>ID</th>
                   <th>Nama</th>
                   <th>Tanggal</th>
 				  <th>Judul</th>
@@ -88,6 +89,7 @@
 				<?php foreach($laporan as $p){ ?>
                                     
                                        <tr>
+									   <td><?php echo $p['id_lap'] ?></td>
 									   <td><?php echo $p['nama'] ?></td>
 										<td><?php echo $p['tanggal'] ?></td>
 										<td><?php echo $p['topik'] ?></td>
