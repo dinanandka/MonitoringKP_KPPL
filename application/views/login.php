@@ -91,9 +91,9 @@
 								<address><p><span>Departemen </span>Sistem Informasi</p><strong>Sukolilo, Surabaya<br> Institut Teknologi Sepuluh Nopember</strong>
 								</address>
 								<div class="social-icons">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
+					           		    <a href="https://ms-my.facebook.com/pages/Jurusan-Sistem-Informasi-ITS/149235835122966" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+					           		    <a href="https://www.instagram.com/hmsi_its/" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+					            		    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jurusan@is.its.ac.id&su=Hello&shva=1" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>	       
 								</div>
 							</div>
 						</div>
