@@ -46,7 +46,7 @@
 				</div> 
 				<div class="collapse navbar-collapse"> 
 					<ul class="nav navbar-nav navbar-right"> 
-						<li class="scroll"><a href="#navigation">Home</a></li> 
+						<li class="scroll active"><a href="#navigation">Home</a></li> 
 						<li class="scroll"><a href="<?php echo base_url('index.php/c_user/lapor');?>">Laporan</a></li>
 						<li class="scroll"><a href="#history">History</a></li> 
 						<li class="scroll"><a href="#contact">Contact</a></li>
@@ -280,15 +280,18 @@
 							</div>
 							<div class="container">
 								<div class="contact-details">
-									<div class="container"></div>
+									<div class="pattern"></div>
 									<div class="row text-center clearfix">
 										<div class="col-sm-6">
-											<div class="contact-address"><address><p><span>Departemen </span>Sistem Informasi</p><strong>Sekretariat<br>Lt. 2 Gd. Lama FTIf ITS <br> Kampus ITS Sukolilo, Keputih<br>Surabaya, 60111<br>Indonesia</strong><br></address>
-												<div class="social-icons">
-													<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
-													<a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
-													<a href="#"><i class="fa fa-linkedin"></i></a>
-												</div>
+											<div class="contact-address">
+											<address><p><span>Departemen </span>Sistem Informasi</p><strong>
+											Sekretariat <br>
+											Lt. 2 Gd. Lama FTIf ITS <br>
+											Institut Teknologi Sepuluh Nopember, Sukolilo <br>
+											Surabaya, 60111 <br>
+											Indonesia <br>
+											Phone: +62 31 5999944 <br> </strong>
+											</address>
 											</div>
 										</div>
 										<div class="col-sm-6"> 
@@ -296,21 +299,22 @@
 												<div class="status alert alert-success" style="display: none"></div>
 												<div class="contact-address"><address><p>Sisfor <span>KP</span></p><strong>Jam Buka : 08.00-16.00<br> +62 31 5999944</strong><br></address>
 												<div class="social-icons">
-													<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
-													<a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
-													<a href="#"><i class="fa fa-linkedin"></i></a>
+													<a href="https://ms-my.facebook.com/pages/Jurusan-Sistem-Informasi-ITS/149235835122966" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+									                <a href="https://www.instagram.com/hmsi_its/" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+									                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jurusan@is.its.ac.id&su=Hello&shva=1" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
 												</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div> 
-							</section> <!--/#contact--> 
+								</div>
+							</div> 
+	</section> <!--/#contact--> 
 
 	<footer id="footer"> 
 		<div class="container"> 
 			<div class="text-center"> 
-				<p>Copyright &copy; 2017 - <a href="http://is.its.ac.id/">Information Systems Department</a> | All Rights Reserved</p> 
+				<p>Copyright &copy; 2017 - <a href="http://is.its.ac.id/">Information System Department</a> | ITS </p> 
 			</div> 
 		</div> 
 	</footer> <!--/#footer--> 
