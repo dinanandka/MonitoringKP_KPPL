@@ -88,7 +88,13 @@
 
 						<div class="col-sm-12">
 							<div class="contact-address">
-								<address><p><span>Departemen </span>Sistem Informasi</p><strong>Sukolilo, Surabaya<br> Institut Teknologi Sepuluh Nopember</strong>
+								<address><p><span>Departemen </span>Sistem Informasi</p><strong>
+								Sekretariat <br>
+								Lt. 2 Gd. Lama FTIf ITS <br>
+								Institut Teknologi Sepuluh Nopember, Sukolilo <br>
+								Surabaya, 60111 <br>
+								Indonesia <br>
+								Phone: +62 31 5999944 <br> </strong>
 								</address>
 								<div class="social-icons">
 					           		    <a href="https://ms-my.facebook.com/pages/Jurusan-Sistem-Informasi-ITS/149235835122966" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
@@ -106,7 +112,7 @@
 	<footer id="footer"> 
 		<div class="container"> 
 			<div class="text-center"> 
-				<p>Copyright 2017 | Information System Department</p> 
+				<p>Copyright &copy; 2017 - <a href="http://is.its.ac.id/">Information System Department</a> | ITS </p> 
 			</div> 
 		</div> 
 	</footer> <!--/#footer--> 
