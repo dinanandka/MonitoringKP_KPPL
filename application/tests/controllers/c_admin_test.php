@@ -35,13 +35,13 @@ class c_admin_test extends TestCase {
 		$this->assertContains('<title>SISFOR KP - Daftar Mahasiswa</title>', $output); //yg dituju ... index.html
 	}
 	
-		public function test_logout()
-		{
-		$_SESSION['username'] = "admin";
-        $_SESSION['level'] = "admin";
-        $this->assertTrue( isset($_SESSION['username']) );
-        $this->request('GET', 'c_admin/logout');
-        $this->assertRedirect('');
-        $this->assertFalse( isset($_SESSION['username']) );
-		}
+		//public function test_logout()
+		//{
+		//$_SESSION['username'] = "admin";
+                //$_SESSION['level'] = "admin";
+                //$this->assertTrue( isset($_SESSION['username']) );
+                //$this->request('GET', 'c_admin/logout');
+                //$this->assertRedirect('');
+                //$this->assertFalse( isset($_SESSION['username']) );
+		//}
 }

@@ -19,7 +19,7 @@ class c_user_test extends TestCase {
 		$_SESSION['username'] = "ervina";
 		$_SESSION['level'] = "user";
 		$output = $this->request('GET', 'c_user/index');
-		$this->assertContains('<title>SISFOR KP - ervina Dashboard</title>', $output); //yg dituju ... index.html
+		$this->assertContains('<title>Sistem Monitoring KP - Sisfor ITS</title>', $output); //yg dituju ... index.html
 		//$this->assertRedirect('auth');
 	}
         
@@ -28,17 +28,19 @@ class c_user_test extends TestCase {
 		$_SESSION['username'] = "ervina";
 		$_SESSION['level'] = "user";
 		$output = $this->request('GET', 'c_user/lapor');
-		$this->assertContains('<title>SISFOR KP - Daftar Mahasiswa</title>', $output); //yg dituju ... index.html
+		$this->assertContains('<title>Laporan Kerja Praktik</title>', $output); //yg dituju ... index.html
 	}
 	
-		public function test_logout()
-		{
-		$_SESSION['username'] = "ervina";
-        $_SESSION['level'] = "user";
-        $this->assertTrue( isset($_SESSION['username']) );
-        $this->request('GET', 'c_user/logout');
-        $this->assertRedirect('');
-        $this->assertFalse( isset($_SESSION['username']) );
-		}
+	public function test_logout(){
+            $_SESSION['username'] = "username";
+            $this->request('GET', 'c_user/logout');
+            $this->assertRedirect('auth');
+        }
+            //public function test_logout(){
+            //$_SESSION['username'] = "username";
+            //$_SESSION['password'] = "password";
+            //$this->request('GET', 'c_user/logout');
+            //$this->assertRedirect('auth');
+        //}
 	
 }

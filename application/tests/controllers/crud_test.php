@@ -25,6 +25,7 @@ class Crud_test extends TestCase
 	public function test_tambah_aksi()
 	{	
 		//$this->assertFalse( isset($_SESSION['eo']) );
+                $_SESSION['username'] = "username";
 		$this->request(
 			'POST',
 			'crud/tambah_aksi',
