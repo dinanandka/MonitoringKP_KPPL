@@ -106,6 +106,22 @@ class Crud_test extends TestCase
 		$this->assertFalse( isset($_SESSION['username']) );
 	}
 	
+	public function test_tambah_aksi_gagalkosong()
+	{
+		$this->request(
+			'POST',
+			'crud/tambah_aksi',
+				[
+					'tanggal' => '',
+					'topik' => '',
+					'isi' => '',
+					'dospem' => '',
+					'nama' => ''
+				]
+		);
+		$this->assertFalse( isset($_SESSION['username']) );
+	}
+	
 	public function test_sukses()
 	{
 		$output = $this->request('GET', 'crud/sukses');
