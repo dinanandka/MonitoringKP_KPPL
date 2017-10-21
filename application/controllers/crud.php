@@ -21,23 +21,18 @@
 				);
 
 				$this->m_crud->input_data($data, 'laporan');
-				redirect('crud/sukses');
-
-
-		}
+				redirect('crud/sukses'); }
 		
 		function hapus($tanggal){
 		$where = array('tanggal' => $tanggal);
 		$this->m_crud->hapus_data($where,'laporan');
 		redirect('c_dosen/laporan');
 		}
-  
 		
 		function sukses(){
 			$this->load->view('sukses_submit');
 		}
 		function gagal(){
-			$this->load->view('gagal_submit');
-		}
+			$this->load->view('gagal_submit'); }
 	} 
  ?>
