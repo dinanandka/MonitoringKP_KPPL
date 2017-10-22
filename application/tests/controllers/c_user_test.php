@@ -1,3 +1,5 @@
+
+
 <?php
 
 /*
@@ -22,7 +24,14 @@ class c_user_test extends TestCase {
 		$this->assertContains('<title>Sistem Monitoring KP - Sisfor ITS</title>', $output); //yg dituju ... index.html
 		//$this->assertRedirect('auth');
 	}
-        
+	
+        public function test_index_bukanuser()
+    {
+			$_SESSION['level'] != "user";
+            $output = $this->request('GET', 'c_user/index');
+            $this->assertFalse( isset($_SESSION['level'], $output) );
+			$this->assertRedirect('auth');
+    }
         public function test_lapor()
 	{
 		$_SESSION['username'] = "ervina";
