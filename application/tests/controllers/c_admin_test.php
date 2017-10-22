@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -20,6 +21,14 @@ class c_admin_test extends TestCase {
 		$output = $this->request('GET', 'c_admin/index');
 		$this->assertContains('<title>SISFOR KP - Admin Dashboard</title>', $output); //yg dituju ... index.html
 	}
+	
+	public function test_index_bukanadmin()
+    {
+			$_SESSION['level'] != "admin";
+            $output = $this->request('GET', 'c_admin/index');
+            $this->assertFalse( isset($_SESSION['level'], $output) );
+			$this->assertRedirect('auth');
+    }	
         public function test_activity()
 	{
 		$_SESSION['username'] = "admin";
