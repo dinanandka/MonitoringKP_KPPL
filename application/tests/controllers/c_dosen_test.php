@@ -37,14 +37,12 @@ class c_dosen_test extends TestCase {
 		$this->assertContains('<title>SISFOR KP - Laporan Mahasiswa</title>', $output); //yg dituju ... index.html
 	}
 	
-		//public function test_logout()
-		//{
-		//$_SESSION['username'] = "dosen";
-                //$_SESSION['level'] = "dosen";
-                //$this->assertTrue( isset($_SESSION['username']) );
-                //$this->request('GET', 'c_dosen/logout');
-                //$this->assertRedirect('');
-                //$this->assertFalse( isset($_SESSION['username']) );
-		//}
+		public function test_logout(){ 
+           $_SESSION['username'] = "dosen"; 
+           $_SESSION['level'] = "dosen"; 
+           $_SESSION['logged_in'] = TRUE; 
+           $output = $this->request('GET','c_dosen/logout'); 
+           $this->assertRedirect('auth'); 
+		   } 
 	
 }
