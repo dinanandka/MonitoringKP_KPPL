@@ -26,8 +26,7 @@
 		function hapus($tanggal){
 		$where = array('tanggal' => $tanggal);
 		$this->m_crud->hapus_data($where,'laporan');
-		redirect('c_dosen/laporan');
-		}
+		redirect('c_dosen/laporan');}
 		
 		function sukses(){
 			$this->load->view('sukses_submit');
