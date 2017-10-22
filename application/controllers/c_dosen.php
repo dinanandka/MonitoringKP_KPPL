@@ -28,9 +28,8 @@ class C_dosen extends CI_Controller {
 	public function logout() {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
-		session_destroy();
-		redirect('auth');
-	}
+		$this->session->sess_destroy();
+		redirect('auth'); }
 
 
 }
