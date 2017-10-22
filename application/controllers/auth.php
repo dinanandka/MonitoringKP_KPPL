@@ -31,17 +31,13 @@ class Auth extends CI_Controller {
  
 			if($this->session->userdata('level') == 'admin')
 			{
-				redirect('c_admin');
-			}
+				redirect('c_admin');}
 			elseif($this->session->userdata('level') == 'user')
 			{
-				redirect('c_user');
-			} 
+				redirect('c_user');} 
 			elseif($this->session->userdata('level') == 'dosen')
 			{
-				redirect('c_dosen');
-			}
-		}
+				redirect('c_dosen');}}
 			else{
 			$this->load->view('bukan_user');
 		}
