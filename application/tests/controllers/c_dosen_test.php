@@ -22,6 +22,14 @@ class c_dosen_test extends TestCase {
 		$this->assertContains('<title>SISFOR KP - Dashboard Dosen</title>', $output); //yg dituju ... index.html
 		//$this->assertRedirect('auth');
 	}
+	
+	public function test_index_bukandosen()
+    {
+			$_SESSION['level'] != "dosen";
+            $output = $this->request('GET', 'c_dosen/index');
+            $this->assertFalse( isset($_SESSION['level'], $output) );
+			$this->assertRedirect('auth');
+    }	
         public function test_activity()
 	{
 		$_SESSION['username'] = "dosen";
