@@ -10,9 +10,9 @@
   <!--Icons-->
   <script src="<?php echo base_url() ?>asset_umum/back-end/js/lumino.glyphs.js"></script>
   <!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
