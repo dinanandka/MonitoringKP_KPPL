@@ -60,17 +60,18 @@
 			<div class="col-sm-8 col-sm-offset-2">
 				<h2 class="title-one">Laporan</h2>
 				<p>Tulis laporan mu dan submit!</p>
+				<?php echo $this->session->flashdata('sukses') ?>
 			</div>
 		</div>
 		</div>
 					<div class="col-sm-12">
 								<div class="status alert alert-success" style="display: none"></div>
-									<form id="contact-form" class="contact" name="contact-form" method="post" action="<?php echo site_url('crud/tambah_aksi')?>">
+									<?php echo form_open_multipart('crud/tambah_aksi') ?>
 							            <fieldset>
 							             <div class="col-sm-3"> 
 							              <div class="form-group">
 							              <h5>Tanggal :</h5>
-							                <input placeholder="mm/dd/yyyy" name="tanggal" type="date" autofocus="" required data-validation-required-message="Tanggal harus di input"> 
+							                <input placeholder="mm/dd/yyyy" name="tanggal" type="date"  autofocus="" required data-validation-required-message="Tanggal harus di input"> 
 											<p class="help-block text-danger"></p>
 											</div>
 											<div class="form-group">
@@ -94,6 +95,7 @@
 							                <textarea cols="100" rows="10"  name="isi" type="text" value="" required data-validation-required-message="Harus ada isinya"> </textarea></div></div>
 											<h5>Upload :</h5>
 							                <input name="file_up" type="file" value="" required data-validation-required-message="Siapa nama dosen pembimbing anda?"> 
+							              	<h5>upload file maksimal 1mb</h5>
 							              <br></br>
 							              <br></br>
 							              <div class="col-sm-12"> 
