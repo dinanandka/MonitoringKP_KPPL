@@ -9,16 +9,15 @@
 		}
 	
 	function tambah_aksi(){
-        $config['upload_path']          = './assets/file/';
+        $config['upload_path']          = 'asset_umum/file/';
         $config['allowed_types']        = 'pdf|doc|docx';
-        $config['max_size']             = 1000000;
-        $config['max_width']            = 1000000;
-        $config['max_height']           = 1000000;
+        $config['max_size']             = 10000000;
 
         $this->load->library('upload', $config);
         if ( ! $this->upload->do_upload('file_up')) {
             $this->session->has_userdata('username');
-            echo print_r(array('error' => $this->upload->display_errors()));
+            $this->session->set_flashdata('sukses', 'Gagal Cuy');
+            redirect($uri = base_url('index.php/c_user/lapor'), $method = 'auto', $code = NULL);
         }
         else{
             $url = base_url().$config['upload_path'].$this->upload->data('file_name');
@@ -35,6 +34,7 @@
                 'file_upload' => $url, 
                 );
             $this->m_crud->input_data($data, 'laporan');
+            $this->session->set_flashdata('sukses', 'Sukses Upload');
             redirect($uri = base_url('index.php/c_user/lapor'), $method = 'auto', $code = NULL);}}
                      
 		function hapus($tanggal){
