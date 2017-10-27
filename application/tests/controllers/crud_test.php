@@ -9,21 +9,33 @@
  */
 class Crud_test extends TestCase
 {	
-   
+   protected $backupGlobalsBlackList = array('_SESSION');
 	public function test_tambah_aksi_berhasil()
 	{	
+            $_SESSION['username'] = 'ervina';
+            $filename = 'outsourcing.pdf';
+            $filepath = 'E:/'.$filename;
+            $files = [
+                            'file_up' => [
+                                    'name'     => $filename,
+                                    'tmp_name' => $filepath,
+                            ],
+                    ];
+                $this->request->setFiles($files);
 		$this->request(
 			'POST',
 			'crud/tambah_aksi',
 				[
-					'tanggal' => '10/21/2017',
-					'topik' => 'topik hangat',
-					'isi' => 'laporan KP mingguan ini',
-					'dospem' => 'Bu wiwik',
+					'tanggal' => '11/22/2017',
+					'topik' => 'topik hangat2',
+					'isi' => 'laporan KP mingguan ini2',
+					'dospem' => 'Bu wiwik2',
 					'nama' => 'ervina'
 				]
 		);
-		$this->assertRedirect('crud/sukses', $output);
+                $this->assertEquals('Sukses Upload',$_SESSION['sukses']);
+		//$this->assertRedirect('crud/sukses', $output);
+                //$this->assertContains('<title>Sistem Monitoring KP - Sisfor ITS</title> ', $output);
 	}
 	
 	public function test_tambah_aksi_gagaltanggal()
@@ -41,6 +53,32 @@ class Crud_test extends TestCase
 		);
 		$this->assertFalse( isset($_SESSION['username']) );
 	}
+        
+         public function test_do_upload_gagal(){
+                $_SESSION['username'] = 'ervina';
+                $filename = 'saasasas.pdf';
+                $filepath = 'E:/'.$filename;
+                $files = [
+                                'file_up' => [
+                                        'name'     => $filename,
+                                        'type'     => 'doc/pdf/docx',
+                                        'tmp_name' => $filepath,
+                                ],
+                        ];
+		$this->request->setFiles($files);
+                $this->request(
+			'POST',
+			'crud/tambah_aksi',
+				[
+					'tanggal' => '11/22/2017',
+					'topik' => 'topik hangat2',
+					'isi' => 'laporan KP mingguan ini2',
+					'dospem' => 'Bu wiwik2',
+					'nama' => 'ervina'
+				]
+		);
+                $this->assertEquals('Gagal Cuy',$_SESSION['sukses']);
+    }
 	
 	public function test_tambah_aksi_gagaltopik()
 	{
