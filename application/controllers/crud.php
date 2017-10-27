@@ -17,20 +17,21 @@
         if ( ! $this->upload->do_upload('file_up')) {
             $this->session->has_userdata('username');
             $this->session->set_flashdata('sukses', 'Gagal Cuy');
-            redirect($uri = base_url('index.php/c_user/lapor'), $method = 'auto', $code = NULL);
-        }
+            redirect($uri = base_url('index.php/c_user/lapor'), $method = 'auto', $code = NULL);   }
         else{
             $url = base_url().$config['upload_path'].$this->upload->data('file_name');
             $tanggal = $this->input->post('tanggal');
             $nama = $this->input->post('nama');
             $topik = $this->input->post('topik');
             $isi = $this->input->post('isi');
+            $dospem =  $this->input->post('dospem');
             
             $data = array(
                 'tanggal' => $tanggal,
                 'nama' => $nama,
                 'topik' => $topik,
                 'isi' => $isi,
+                'dospem'=> $dospem,
                 'file_upload' => $url, 
                 );
             $this->m_crud->input_data($data, 'laporan');
